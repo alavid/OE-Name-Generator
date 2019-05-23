@@ -77,7 +77,7 @@ window.onload = function() {
             meaning = frontFemale.meanings[frontRand] + " " + backFemale.meanings[backRand];
         }
 
-        nameField.innerHTML = name + " (" + meaning + ") " + gender + modernForm(name) + "<br>" + nameField.innerHTML;
+        nameField.innerHTML = "<div id='name-text'>" + name + "</div> (" + meaning + ") " + gender + modernForm(name) + "<br>" + nameField.innerHTML;
     }
 
     function modernForm(name) {

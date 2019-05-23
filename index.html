@@ -3,15 +3,25 @@
     <head>
         <title>OE Name Generator</title>
         <script src="Scripts/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Rakkas|Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Ango-Saxon Name Generator</h1>
-        <p>
+        <div id="header">
+            <h1 id="title">OLD ENGLISH NAME GENERATOR</h1>
+        </div>
+        <p id="description">
             Wes hal! Germanic names were typically dithematic, meaning certain words could be combined
-            to form a name. This site uses this property to generate random Anglo-Saxon names by
+            to form a name. This site takes advantage of this property to generate random Anglo-Saxon names by
             combining two of these words, and outputting the meaning and a modern form, if I could find one.
         </p>
-        <button type="button" id="generate-button">Generate Name</button>
-        <p id="name"></p>
+        <div id="content">
+            <div id="button-conatiner">
+                <button type="button" id="generate-button">Generate Name</button>
+            </div>
+            <div id="list">
+                <p id="name"><div id="starter">Fill the void</div></p>
+            </div>
+        </div>
     </body>
 </html>
