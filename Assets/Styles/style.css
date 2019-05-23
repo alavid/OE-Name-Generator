@@ -27,22 +27,31 @@
     color: white;
     font-family: 'Roboto', serif;
     text-align: center;
+    font-weight: bold;
     border: none;
     padding: 15px 32px;
     font-size: 14pt;
     border-radius: 4px;
     box-shadow: 2px;
     cursor: pointer;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0px 0px 6px 0px gray;
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.15s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
 }
 
 #generate-button:hover {
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 9px 1px gray;
+    background-color: #f0586a;
 }
 
 #generate-button:active {
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 0px 0px gray;
+}
+
+#generate-button:focus {
+    outline:0;
 }
 
 #list {
@@ -52,8 +61,8 @@
     margin-left: 30px;
     margin-right: 30px;
     background-color: white;
-    border: 1px solid #dedede;
     border-radius: 4px;
+    box-shadow: inset 0px 0px 6px 0px #cecece;
 }
 
 #name {
