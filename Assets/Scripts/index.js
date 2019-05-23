@@ -4,27 +4,27 @@ window.onload = function() {
     let nameField = document.getElementById("name");
 
     let frontMale = {
-        names: [    "ælf", "æðel", "beorht", "beorn", "brun","cén", "ceol", "cuþ", "cyne", "deór", "dun", "ead", "eald", "ecg",
-                    "eofor", "glæd", "god", "grim", "guþ", "here", "hild", "hroð", "léof", "ós", "sæ", "sige", "stíþ", "sunu", "swiþ",
-                    "þúr", "þeod", "wað", "weald", "wig", "wil", "wine", "wulf", "wynn"],
-        meanings: [ "Elven", "Noble", "Bright", "Warrior", "Brown", "Bold", "Ship", "Renowned", "Brave", "Dear", "Dark", "Rich",
-                    "Old", "Blade", "Boar", "Gleaming", "Good", "Fierce", "Combat", "Army", "Battle", "Famous", "Beloved", "Divine",
-                    "Sea", "Victorious", "Hard", "Son's", "Strong", "Thor", "People's", "Hunt", "Powerful", "Warlike", "Wiley",
-                    "Friendly", "Wolf", "Joyous"]
+        names: [    "á", "ælf", "æðel", "beald", "beorht", "beorn", "brun","cén", "ceol", "cuþ", "cyne", "deór", "dun", "ead", "eal", "ealh", "eald",
+                    "ecg", "eofor", "engel", "glæd", "god", "grim", "guþ", "here", "hild", "hroð", "léof", "óht", "ós", "ric", "sæ", "sige", "stíþ",
+                    "sunu", "swiþ", "þúr", "þeod", "wað", "weald", "wig", "wil", "wine", "wulf", "wynn"],
+        meanings: [ "Eternal", "Elven", "Noble", "Bold", "Bright", "Warrior", "Brown", "Bold", "Ship", "Renowned", "Brave", "Dear", "Dark", "Rich",
+                    "All", "Temple", "Old", "Blade", "Boar", "Anglian", "Gleaming", "Good", "Fierce", "Combat", "Army", "Battle", "Famous", "Beloved",
+                    "Fearsome", "Divine", "Power", "Sea", "Victorious", "Hard", "Son's", "Strong", "Thor's", "People's", "Hunt", "Powerful", "Warlike",
+                    "Wiley", "Friendly", "Wolf", "Joyous"]
     }
     let frontFemale = {
-        names: [    "ælf", "æðel", "beorht", "brun","cén", "ceol", "cuþ", "cwen", "cyne", "deór", "dun", "ead", "eald", "ecg",
-                    "eofor", "glæd", "god", "grim", "har", "hild", "hroð", "léof", "mild", "ós", "sæ", "sige", "stíþ", "swiþ",
+        names: [    "á", "ælf", "æðel", "beorht", "brun","cén", "ceol", "cuþ", "cwen", "cyne", "deór", "dun", "ead", "eal", "eal", "eald", "ecg",
+                    "eofor", "engel", "glæd", "god", "grim", "har", "hild", "hroð", "léof", "mild", "ós", "sæ", "sige", "stíþ", "swiþ",
                     "þúr", "þeod", "wað", "weald", "wig", "wil", "wine", "wulf", "wynn"],
-        meanings: [ "Elven", "Noble", "Bright", "Brown", "Bold", "Ship", "Renowned", "Queen's", "Brave", "Dear", "Dark", "Rich",
-                    "Old", "Blade", "Boar", "Gleaming", "Good", "Fierce", "Army", "Battle", "Famous", "Beloved", "Gentle", "Divine",
-                    "Sea", "Victorious", "Hard", "Strong", "Thor", "People's", "Hunt", "Powerful", "War", "Wiley", "Friendly",
+        meanings: [ "Eternal", "Elven", "Noble", "Bright", "Brown", "Bold", "Ship", "Renowned", "Queen's", "Brave", "Dear", "Dark", "Rich",
+                    "All", "Temple", "Old", "Blade", "Boar", "Anglian", "Gleaming", "Good", "Fierce", "Army", "Battle", "Famous", "Beloved", "Gentle",
+                    "Divine", "Sea", "Victorious", "Hard", "Strong", "Thor", "People's", "Hunt", "Powerful", "War", "Wiley", "Friendly",
                     "Wolf", "Joyous"]
     }
     let backMale = {
-        names: [    "beald", "behrt", "beorn", "dæg", "frið", "gár", "heah", "heard", "helm", "here", "hún", "mær", "mund", "noð",
+        names: [    "beald", "behrt", "beorn", "dæg", "frið", "gár", "heah", "heard", "helm", "here", "hún", "láf", "mær", "mund", "noð",
                     "ræd", "ric", "sige", "stán", "þúr", "weald", "weard", "wig", "wine", "wulf"],
-        meanings: [ "Bold", "Bright", "Warrior", "Day", "Peace", "Spear", "High", "Bravery", "Helmet", "Army", "Young Bear", "Fame",
+        meanings: [ "Bold", "Bright", "Warrior", "Day", "Peace", "Spear", "High", "Bravery", "Helmet", "Army", "Young Bear", "Heir", "Fame",
                     "Protector", "Bold", "Counsel", "Power", "Victory", "Stone", "Thor", "Power", "Guardian", "War", "Friend", "Wolf"]
     }
     let backFemale = {
@@ -82,7 +82,7 @@ window.onload = function() {
 
     function modernForm(name) {
 
-        if (name === "Hroðbehrt") return " Modern form: \"Robert\"";
+        if (name === "Hroðbehrt") return " Modern form: \"Robert/Rupert\"";
         else if (name === "Eadweard") return " Modern form: \"Edward\"";
         else if (name === "Eadmund") return " Modern form: \"Edmund\"";
         else if (name === "Ælfræd") return " Modern form: \"Alfred\"";
@@ -102,7 +102,13 @@ window.onload = function() {
         else if (name === "Hroðwulf") return " Modern form: \"Rudolf\"";
         else if (name === "Æðelwulf") return " Modern form: \"Adolf\"";
         else if (name === "Godgifu") return " Modern form: \"Godiva\"";
-        else if (name === "Eoforheard") return " Modern form: \"Everard\"";
+        else if (name === "Eoforheard") return " Modern form: \"Everett\"";
+        else if (name === "Richeard") return " Modern form: \"Richard\"";
+        else if (name === "Beornheard") return " Modern form: \"Bernard\"";
+        else if (name === "Bealdwine") return " Modern form: \"Baldwin\"";
+        else if (name === "Bealdwine") return " Modern form: \"Baldwin\"";
+        else if (name === "Þeodbeald") return " Modern form: \"Theobald\"";
+        else if (name === "Áric") return " Modern form: \"Eric\"";
         else return "";
     }
 }
