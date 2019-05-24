@@ -17,15 +17,20 @@
     display: flex;
 }
 
+button:focus, select:focus {
+    outline: 0;
+}
+
 #button-container {
-    display: inline-block;
+    display: block;
     width: 200;
 }
 
 #generate-button {
     background-color: #ed384d;
+    font-family: "Roboto", serif;
     color: white;
-    font-family: 'Roboto', serif;
+    width: 200px;
     text-align: center;
     font-weight: bold;
     border: none;
@@ -50,8 +55,74 @@
     box-shadow: 0px 0px 0px 0px gray;
 }
 
+#mf {
+    display: block;
+}
+
+#male, #female {
+    display: inline;
+    background-color: #f6f6f6;
+    font-family: "Roboto", serif;
+    color: black;
+    text-align: center;
+    border: none;
+    width: 98px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12pt;
+    border-radius: 4px;
+    box-shadow: 2px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px 0px gray;
+    margin-top: 10px;
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.15s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+#male:hover, #female:hover {
+    box-shadow: 0px 0px 9px 1px gray;
+    background-color: white;
+}
+
+#female.pressed, #male.pressed {
+    box-shadow: 0px 0px 0px 0px gray;
+    background-color: white;
+    border: none;
+}
+
+#suffix, #prefix {
+    width: 200px;
+    margin-top: 5px;
+    background-color: #f6f6f6;
+    font-family: "Roboto", serif;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 6px 0px #cecece;
+    padding: 10px;
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.15s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+#suffix:focus, #prefix:focus, #prefix:hover, #suffix:hover {
+    background-color: white;
+    border: none;
+}
+
 #generate-button:focus {
     outline:0;
+}
+
+#label {
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+    font-family: "Roboto", serif;
+    font-size: 10pt;
 }
 
 #list {
