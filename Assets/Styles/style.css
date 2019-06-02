@@ -87,7 +87,12 @@ button:focus, select:focus {
     background-color: white;
 }
 
-#female.pressed, #male.pressed, #female:active, #male:active {
+#female:active, #male:active {
+    top: 6px;
+    border-width: 0 0 0px;
+}
+
+#female.pressed, #male.pressed {
     top: 5px;
     border-width: 0 0 1px;
 }
