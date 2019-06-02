@@ -88,10 +88,8 @@ button:focus, select:focus {
 }
 
 #female.pressed, #male.pressed, #female:active, #male:active {
-    top: 6px;
-    border-width: 0 0 0px;
-    background-color: white;
-    border: none;
+    top: 5px;
+    border-width: 0 0 1px;
 }
 
 #suffix, #prefix {
