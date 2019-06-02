@@ -27,32 +27,33 @@ button:focus, select:focus {
 }
 
 #generate-button {
+    margin-top: 2px;
+    border-width: 0 0 4px;
     background-color: #ed384d;
     font-family: "Roboto", serif;
     color: white;
     width: 200px;
     text-align: center;
     font-weight: bold;
-    border: none;
     padding: 15px 32px;
     font-size: 14pt;
-    border-radius: 4px;
+    border-radius: 12px;
+    border-color: #ed384d;
     box-shadow: 2px;
     cursor: pointer;
-    box-shadow: 0px 0px 6px 0px gray;
-    transition-property: box-shadow, background-color;
-    transition-duration: 0.15s;
+    transition-property: border-width, background-color, margin-top;
+    transition-duration: 0.1s;
     transition-delay: 0s;
     transition-timing-function: ease-in-out;
 }
 
 #generate-button:hover {
-    box-shadow: 0px 0px 9px 1px gray;
     background-color: #f0586a;
 }
 
 #generate-button:active {
-    box-shadow: 0px 0px 0px 0px gray;
+    margin-top: 6px;
+    border-width: 0 0 0px;
 }
 
 #mf {
@@ -60,34 +61,34 @@ button:focus, select:focus {
 }
 
 #male, #female {
+    margin-top: 10px;
+    border-width: 0 0 4px;
     display: inline;
+    position: relative;
+    top: 2px;
     background-color: #f6f6f6;
     font-family: "Roboto", serif;
     color: black;
     text-align: center;
-    border: none;
     width: 98px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 12pt;
-    border-radius: 4px;
-    box-shadow: 2px;
+    border-radius: 12px;
     cursor: pointer;
-    box-shadow: 0px 0px 6px 0px gray;
-    margin-top: 10px;
-    transition-property: box-shadow, background-color;
-    transition-duration: 0.15s;
+    transition-property: all;
+    transition-duration: 0.1s;
     transition-delay: 0s;
     transition-timing-function: ease-in-out;
 }
 
 #male:hover, #female:hover {
-    box-shadow: 0px 0px 9px 1px gray;
     background-color: white;
 }
 
-#female.pressed, #male.pressed {
-    box-shadow: 0px 0px 0px 0px gray;
+#female.pressed, #male.pressed, #female:active, #male:active {
+    top: 6px;
+    border-width: 0 0 0px;
     background-color: white;
     border: none;
 }
