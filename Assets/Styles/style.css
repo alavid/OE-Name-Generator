@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+body {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 #title {
     font-family: 'Rakkas', cursive;
     font-weight: normal;
@@ -26,9 +31,42 @@ button:focus, select:focus {
     width: 200;
 }
 
+#clear-button {
+    position: relative;
+    margin-top: 13px;
+    border-width: 0 0 4px;
+    border-style: solid;
+    border-color: #e8e6e4;
+    background-color: #f6f6f6;
+    font-family: "Roboto", serif;
+    border-radius: 12px;
+    color: black;
+    text-align: center;
+    font-size: 12pt;
+    width: 200px;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition-property: border-width, background-color, margin-top;
+    transition-duration: 0.1s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+#clear-button:hover {
+    background-color: white;
+}
+
+#clear-button:active {
+    margin-top: 17px;
+    border-width: 0 0 0px;
+}
+
 #generate-button {
     margin-top: 0px;
     border-width: 0 0 5px;
+    border-style: solid;
+    border-color: #cf2d3e;
+    border-radius: 12px;
     background-color: #ed384d;
     font-family: "Roboto", serif;
     color: white;
@@ -38,9 +76,6 @@ button:focus, select:focus {
     font-weight: bold;
     padding: 15px 0px;
     font-size: 14pt;
-    border-radius: 12px;
-    border-color: #ed384d;
-    box-shadow: 2px;
     cursor: pointer;
     transition-property: border-width, background-color, margin-top;
     transition-duration: 0.1s;
@@ -63,7 +98,10 @@ button:focus, select:focus {
 
 #male, #female {
     margin-top: 10px;
+    margin-bottom: 0px;
     border-width: 0 0 4px;
+    border-style: solid;
+    border-color: #e8e6e4;
     display: inline;
     position: relative;
     top: 2px;
@@ -87,12 +125,14 @@ button:focus, select:focus {
     background-color: white;
 }
 
-#female:active, #male:active {
+#female:active, #male:active, #female.pressed:active, #male.pressed:active {
+    margin-bottom: 6px;
     top: 6px;
     border-width: 0 0 0px;
 }
 
 #female.pressed, #male.pressed {
+    margin-bottom: 5px;
     top: 5px;
     border-width: 0 0 1px;
 }
@@ -104,7 +144,7 @@ button:focus, select:focus {
     font-family: "Roboto", serif;
     color: black;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     box-shadow: inset 0px 0px 6px 0px #cecece;
     padding: 10px;
     transition-property: box-shadow, background-color;
@@ -133,12 +173,13 @@ button:focus, select:focus {
 #list {
     display: inline-block;
     flex: 1;
-    padding-left: 20px;
+    padding: 5px 15px 0px 15px;
     margin-left: 30px;
     margin-right: 30px;
     background-color: white;
-    border-radius: 4px;
+    border-radius: 12px;
     box-shadow: inset 0px 0px 6px 0px #cecece;
+    height: auto;
 }
 
 #name {
@@ -157,5 +198,6 @@ button:focus, select:focus {
 }
 
 body {
-    background-color: #fff8db;
+    background-image: url("../Images/ricepaper_v3.png");
+    background-repeat: repeat;
 }
