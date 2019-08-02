@@ -232,6 +232,7 @@ window.onload = function() {
         else if (name === "Friðnoð") return " Modern form: \"Ferdinand\"";
         else if (name === "Þeodric") return " Modern form: \"Dereck\"";
         else if (name === "Eorcanbeald") return " Modern form: \"Archibald\"";
+        else if (name === "Winestán") return " Modern form: \"Winston\"";
         else return "";
     }
 }
