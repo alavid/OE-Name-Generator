@@ -1,7 +1,7 @@
 window.onload = function() {
 
     let generate = document.getElementById("generate-button");
-    let nameField = document.getElementById("name");
+    let list = document.getElementById("list");
     let maleButton = document.getElementById("male");
     let femaleButton = document.getElementById("female");
     let prefixBlock = document.getElementById("prefix-block");
@@ -55,7 +55,7 @@ window.onload = function() {
 
     cancel.onclick = function() {
 
-        nameField.innerHTML = '<p id="starter">Fill the void</p>';
+        list.innerHTML = '<p id="starter">Fill the void</p>';
     }
 
     male.onclick = function() {
@@ -202,11 +202,12 @@ window.onload = function() {
         }
 
         starter.innerHTML = "";
-        nameField.innerHTML = "<div id='name-text'>" + name + "</div>" + "<br>"
+        list.innerHTML = "<div id='entry'>"
+                                + "<div id='name-text'>" + name + "</div>" + "<br>"
                                 + gender + " " + meaning + "<br>"
                                 + "Runic form: " + runic
-                                + modernForm(name) + "<br>"
-                                + nameField.innerHTML;
+                                + modernForm(name) + "</div>"
+                                + list.innerHTML;
     }
 
     function modernForm(name) {
