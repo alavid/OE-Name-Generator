@@ -10,43 +10,142 @@ window.onload = function() {
     let suffixFieldMeaning = document.getElementById("suffix-meaning-option-text");
     let cancel = document.getElementById("clear-button");
 
-    let frontMale = {
-        names: [    "á", "ælf", "æðel", "beald", "beorht", "beorn", "brun","cén", "ceol", "cuþ", "cyne", "deór", "dun", "ead", "eal", "ealh", "eald",
-                    "ecg", "eofor", "eoh", "eorcan", "engel", "frið", "glæd", "god", "grim", "guþ", "here", "hild", "hroð", "léof", "óht", "ós", "ric",
-                    "sæ", "sige", "stíþ", "sunu", "swiþ", "þunor", "þeod", "þegen", "wald", "wæl", "wað", "weald", "wig", "wil", "wine", "wulf", "wyn"],
-        meanings: [ "Eternal", "Elven", "Noble", "Bold", "Bright", "Warrior", "Brown", "Bold", "Ship", "Renowned", "Brave", "Dear", "Dark", "Rich",
-                    "All", "Temple", "Old", "Blade", "Boar", "Horse", "Pure", "Anglian", "Peaceful", "Gleaming", "Good", "Fierce", "Combat", "Army",
-                    "Battle", "Famous", "Beloved", "Fearsome", "Divine", "Power", "Sea", "Victorious", "Hard", "Son's", "Strong", "Thor's", "People's",
-                    "Thane's", "Forest", "Slaughter", "Hunt", "Powerful", "Warlike", "Desired", "Friendly", "Wolf", "Joyous"],
-        runic: [    "ᚪ", "ᚫᛚᚠ", "ᚫᚦᛖᛚ", "ᛒᛠᛚᛞ", "ᛒᛇᚱᚻᛏ", "ᛒᛇᚱᚾ", "ᛒᚱᚢᚾ", "ᚳᛖᚾ", "ᚳᛇᛚ", "ᚳᚢᚦ", "ᚳᚣᚾᛖ", "ᛞᛇᚱ", "ᛞᚢᚾ", "ᛠᛞ", "ᛠᛚ", "ᛠᛚᚻ", "ᛠᛚᛞ",
-                    "ᛖᚳᚷ", "ᛇᚠᚩᚱ", "ᛇᚻ", "ᛇᚱᚳᚪᚾ", "ᛖᛝᛖᛚ", "ᚠᚱᛁᚦ", "ᚷᛚᚫᛞ", "ᚷᚩᛞ", "ᚷᚱᛁᛗ", "ᚷᚢᚦ", "ᚻᛖᚱᛖ", "ᚻᛁᛚᛞ", "ᚻᚱᚩᚦ", "ᛚᛇᚠ", "ᚩᚻᛏ", "ᚩᛋ", "ᚱᛁᚳ",
-                    "ᛋᚫ", "ᛋᛁᚷᛖ", "ᛋᛏᛁᚦ", "ᛋᚢᚾᚢ", "ᛋᚹᛁᚦ", "ᚦᚢᚾᚩᚱ", "ᚦᛇᛞ", "ᚦᛖᚷᛖᚾ", "ᚹᚪᛚᛞ", "ᚹᚫᛚ", "ᚹᚪᚦ", "ᚹᛠᛚᛞ", "ᚹᛁᚷ", "ᚹᛁᛚ", "ᚹᛁᚾᛖ", "ᚹᚢᛚᚠ", "ᚹᚣᚾ"]
-    }
-    let frontFemale = {
-        names: [    "á", "ælf", "æðel", "beorht", "brun","cén", "ceol", "cuþ", "cwen", "cyne", "deór", "dun", "ead", "eal", "ealh", "eald", "ecg",
-                    "eofor", "eoh", "eorcen", "engel", "glæd", "god", "grim", "har", "hild", "hroð", "léof", "mild", "ós", "sæ", "sige", "stíþ", "swiþ",
-                    "þunor", "þeod", "þegen", "wald", "wæl", "wað", "weald", "wig", "wil", "wine", "wulf", "wyn"],
-        meanings: [ "Eternal", "Elven", "Noble", "Bright", "Brown", "Bold", "Ship", "Renowned", "Queen's", "Brave", "Dear", "Dark", "Rich",
-                    "All", "Temple", "Old", "Blade", "Boar", "Horse", "Pure", "Anglian", "Gleaming", "Good", "Fierce", "Army", "Battle", "Famous",
-                    "Beloved", "Gentle", "Divine", "Sea", "Victorious", "Hard", "Strong", "Thor", "People's", "Thane's", "Forest", "Slaughter", "Hunt",
-                    "Powerful", "War", "Desired", "Friendly", "Wolf", "Joyous"],
-        runic: [    "ᚪ", "ᚫᛚᚠ", "ᚫᚦᛖᛚ", "ᛒᛇᚱᚻᛏ", "ᛒᚱᚢᚾ", "ᚳᛖᚾ", "ᚳᛇᛚ", "ᚳᚢᚦ", "ᚳᚹᛖᚾ", "ᚳᚣᚾᛖ", "ᛞᛇᚱ", "ᛞᚢᚾ", "ᛠᛞ", "ᛠᛚ", "ᛠᛚᚻ", "ᛠᛚᛞ", "ᛖᚳᚷ",
-                    "ᛇᚠᚩᚱ", "ᛇᚻ", "ᛇᚱᚳᚪᚾ", "ᛖᛝᛖᛚ", "ᚷᛚᚫᛞ", "ᚷᚩᛞ", "ᚷᚱᛁᛗ", "ᚻᚪᚱ", "ᚻᛁᛚᛞ", "ᚻᚱᚩᚦ", "ᛚᛇᚠ", "ᛗᛁᛚᛞ", "ᚩᛋ", "ᛋᚫ", "ᛋᛁᚷᛖ", "ᛋᛏᛁᚦ", "ᛋᚹᛁᚦ",
-                    "ᚦᚢᚾᚩᚱ", "ᚦᛇᛞ", "ᚦᛖᚷᛖᚾ", "ᚹᚪᛚᛞ", "ᚹᚫᛚ", "ᚹᚪᚦ", "ᚹᛠᛚᛞ", "ᚹᛁᚷ", "ᚹᛁᛚ", "ᚹᛁᚾᛖ", "ᚹᚢᛚᚠ", "ᚹᚣᚾ"]
-    }
-    let backMale = {
-        names: [    "beald", "behrt", "beorn", "dæg", "frið", "gár", "heah", "heard", "helm", "here", "hún", "láf", "mær", "mund", "noð",
-                    "ræd", "ric", "sige", "stán", "þegen", "þunor", "weald", "weard", "wig", "wine", "wulf"],
-        meanings: [ "Bold", "Bright", "Warrior", "Day", "Peace", "Spear", "High", "Bravery", "Helmet", "Army", "Young Bear", "Heir", "Fame",
-                    "Protector", "Bold", "Counsel", "Power", "Victory", "Stone", "Thane", "Thor", "Power", "Guardian", "War", "Friend", "Wolf"],
-        runic: [    "ᛒᛠᛚᛞ", "ᛒᛇᚱᚻᛏ", "ᛒᛇᚱᚾ", "ᛞᚫᚷ", "ᚠᚱᛁᚦ", "ᚷᚪᚱ", "ᚻᛠᚻ", "ᚻᛠᚱᛞ", "ᚻᛖᛚᛗ", "ᚻᛖᚱᛖ", "ᚻᚢᚾ", "ᛚᚪᚠ", "ᛗᚫᚱ", "ᛗᚢᚾᛞ", "ᚾᚩᚦ",
-                    "ᚱᚫᛞ", "ᚱᛁᚳ", "ᛋᛁᚷᛖ", "ᛋᛏᚪᚾ", "ᚦᛖᚷᛖᚾ", "ᚦᚢᚾᚩᚱ", "ᚹᛠᛚᛞ", "ᚹᛠᚱᛞ", "ᚹᛁᚷ", "ᚹᛁᚾᛖ", "ᚹᚢᛚᚠ"]
-    }
-    let backFemale = {
-        names: [    "burg", "flæd", "gifu", "gyð", "hild", "swiþ", "þrýð", "wyn"],
-        meanings: [ "City", "Beauty", "Gift", "Battle", "Battle", "Strength", "Might", "Joy"],
-        runic: [    "ᛒᚢᚱᚷ", "ᚠᛚᚫᛞ", "ᚷᛁᚠᚢ", "ᚷᚣᚦ", "ᚻᛁᛚᛞ", "ᛋᚹᛁᚦ", "ᚦᚱᚣᚦ", "ᚹᚣᚾ"]
-    }
+    let frontMale = [
+        ["ā", "Eternal", "ᚪ"],
+        ["ælf", "Elven", "ᚫᛚᚠ"],
+        ["æðel", "Noble", "ᚫᚦᛖᛚ"],
+        ["beald", "Bold", "ᛒᛠᛚᛞ"],
+        ["beorht", "Bright", "ᛒᛇᚱᚻᛏ"],
+        ["beorn", "Warrior", "ᛒᛇᚱᚾ"],
+        ["brūn", "Brown", "ᛒᚱᚢᚾ"],
+        ["cēn", "Bold", "ᚳᛖᚾ"],
+        ["cēol", "Ship", "ᚳᛇᛚ"],
+        ["cūð", "Renowned", "ᚳᚢᚦ"],
+        ["cyne", "Brave", "ᚳᚣᚾᛖ"],
+        ["dēor", "Dear", "ᛞᛇᚱ"],
+        ["ēad", "Rich", "ᛠᛞ"],
+        ["eall", "All", "ᛠᛚᛚ"],
+        ["ealh", "Temple", "ᛠᛚᚻ"],
+        ["eald", "Old", "ᛠᛚᛞ"],
+        ["ecg", "Blade", "ᛖᚳᚷ"],
+        ["eofor", "Boar", "ᛇᚠᚩᚱ"],
+        ["eoh", "Horse", "ᛇᚻ"],
+        ["eorcen", "Pure", "ᛇᚱᚳᚪᚾ"],
+        ["engel", "Anglian", "ᛖᛝᛖᛚ"],
+        ["frið", "Peaceful", "ᚠᚱᛁᚦ"],
+        ["glæd", "Gleaming", "ᚷᛚᚫᛞ"],
+        ["gōd", "Good", "ᚷᚩᛞ"],
+        ["grim", "Fierce", "ᚷᚱᛁᛗ"],
+        ["gūð", "Combat", "ᚷᚢᚦ"],
+        ["here", "Army", "ᚻᛖᚱᛖ"],
+        ["hild", "Battle", "ᚻᛁᛚᛞ"],
+        ["hroð", "Famous", "ᚻᚱᚩᚦ"],
+        ["lēof", "Beloved", "ᛚᛇᚠ"],
+        ["ōht", "Fearsome", "ᚩᚻᛏ"],
+        ["ōs", "Divine", "ᚩᛋ"],
+        ["rīc", "Powerful", "ᚱᛁᚳ"],
+        ["sǣ", "Sea", "ᛋᚫ"],
+        ["sige", "Victorious", "ᛋᛁᚷᛖ"],
+        ["stīð", "Hard", "ᛋᛏᛁᚦ"],
+        ["sunu", "Son's", "ᛋᚢᚾᚢ"],
+        ["swīð", "Strong", "ᛋᚹᛁᚦ"],
+        ["þunor", "Thor", "ᚦᚢᚾᚩᚱ"],
+        ["þēod", "People's", "ᚦᛇᛞ"],
+        ["þegn", "Thane's", "ᚦᛖᚷᚾ"],
+        ["wald", "Forest", "ᚹᚪᛚᛞ"],
+        ["wæl", "Slaughter", "ᚹᚫᛚ"],
+        ["wāð", "Wandering", "ᚹᚪᚦ"],
+        ["weald", "Powerful", "ᚹᛠᛚᛞ"],
+        ["wīg", "War", "ᚹᛁᚷ"],
+        ["wil", "Desired", "ᚹᛁᛚ"],
+        ["wine", "Friendly", "ᚹᛁᚾᛖ"],
+        ["wulf", "Wolfish", "ᚹᚢᛚᚠ"],
+        ["wyn", "Joyous", "ᚹᚣᚾ"]
+    ]
+    let frontFemale = [
+        ["ā", "Eternal", "ᚪ"],
+        ["ælf", "Elven", "ᚫᛚᚠ"],
+        ["æðel", "Noble", "ᚫᚦᛖᛚ"],
+        ["beorht", "Bright", "ᛒᛇᚱᚻᛏ"],
+        ["brūn", "Brown", "ᛒᚱᚢᚾ"],
+        ["cēn", "Bold", "ᚳᛖᚾ"],
+        ["cēol", "Ship", "ᚳᛇᛚ"],
+        ["cūð", "Renowned", "ᚳᚢᚦ"],
+        ["cwēn", "Queen's", "ᚳᚹᛖᚾ"],
+        ["dēor", "Dear", "ᛞᛇᚱ"],
+        ["ēad", "Rich", "ᛠᛞ"],
+        ["eall", "All", "ᛠᛚᛚ"],
+        ["ealh", "Temple", "ᛠᛚᚻ"],
+        ["eald", "Old", "ᛠᛚᛞ"],
+        ["ecg", "Blade", "ᛖᚳᚷ"],
+        ["eofor", "Boar", "ᛇᚠᚩᚱ"],
+        ["eoh", "Horse", "ᛇᚻ"],
+        ["eorcen", "Pure", "ᛇᚱᚳᚪᚾ"],
+        ["engel", "Anglian", "ᛖᛝᛖᛚ"],
+        ["glæd", "Gleaming", "ᚷᛚᚫᛞ"],
+        ["gōd", "Good", "ᚷᚩᛞ"],
+        ["grim", "Fierce", "ᚷᚱᛁᛗ"],
+        ["here", "Army", "ᚻᛖᚱᛖ"],
+        ["hild", "Battle", "ᚻᛁᛚᛞ"],
+        ["hroð", "Famous", "ᚻᚱᚩᚦ"],
+        ["lēof", "Beloved", "ᛚᛇᚠ"],
+        ["mild", "Gentle", "ᛗᛁᛚᛞ"],
+        ["ōs", "Divine", "ᚩᛋ"],
+        ["sǣ", "Sea", "ᛋᚫ"],
+        ["sige", "Victorious", "ᛋᛁᚷᛖ"],
+        ["stīð", "Hard", "ᛋᛏᛁᚦ"],
+        ["swīð", "Strong", "ᛋᚹᛁᚦ"],
+        ["þunor", "Thor", "ᚦᚢᚾᚩᚱ"],
+        ["þēod", "People's", "ᚦᛇᛞ"],
+        ["þegn", "Thane's", "ᚦᛖᚷᚾ"],
+        ["wald", "Forest", "ᚹᚪᛚᛞ"],
+        ["wæl", "Slaughter", "ᚹᚫᛚ"],
+        ["wāð", "Hunt", "ᚹᚪᚦ"],
+        ["weald", "Powerful", "ᚹᛠᛚᛞ"],
+        ["wīg", "War", "ᚹᛁᚷ"],
+        ["wil", "Desired", "ᚹᛁᛚ"],
+        ["wine", "Friendly", "ᚹᛁᚾᛖ"],
+        ["wulf", "Wolf", "ᚹᚢᛚᚠ"],
+        ["wyn", "Joyous", "ᚹᚣᚾ"]
+    ]
+    let backMale = [
+        ["beald", "Bold", "ᛒᛠᛚᛞ"],
+        ["behrt", "Bright", "ᛒᛇᚱᚻᛏ"],
+        ["beorn", "Warrior", "ᛒᛇᚱᚾ"],
+        ["dæg", "Day", "ᛞᚫᚷ"],
+        ["frið", "Peace", "ᚠᚱᛁᚦ"],
+        ["gār", "Spear", "ᚷᚪᚱ"],
+        ["hēah", "High", "ᚻᛠᚻ"],
+        ["heard", "Bravery", "ᚻᛠᚱᛞ"],
+        ["helm", "Helmet", "ᚻᛖᛚᛗ"],
+        ["here", "Army", "ᚻᛖᚱᛖ"],
+        ["hūn", "Young Bear", "ᚻᚢᚾ"],
+        ["lāf", "Heir", "ᛚᚪᚠ"],
+        ["mǣre", "Fame", "ᛗᚫᚱᛖ"],
+        ["mund", "Protector", "ᛗᚢᚾᛞ"],
+        ["nōð", "Boldness", "ᚾᚩᚦ"],
+        ["rǣd", "Counsel", "ᚱᚫᛞ"],
+        ["rīc", "Power", "ᚱᛁᚳ"],
+        ["sige", "Victory", "ᛋᛁᚷᛖ"],
+        ["stān", "Stone", "ᛋᛏᚪᚾ"],
+        ["þegn", "Thane", "ᚦᛖᚷᚾ"],
+        ["þunor", "Thor", "ᚦᚢᚾᚩᚱ"],
+        ["weald", "Power", "ᚹᛠᛚᛞ"],
+        ["weard", "Guardian", "ᚹᛠᚱᛞ"],
+        ["wig", "War", "ᚹᛁᚷ"],
+        ["wine", "Friend", "ᚹᛁᚾᛖ"],
+        ["wulf", "Wolf", "ᚹᚢᛚᚠ"]
+    ]
+    let backFemale = [
+        ["burg", "City", "ᛒᚢᚱᚷ"],
+        ["flæd", "Beauty", "ᚠᛚᚫᛞ"],
+        ["gifu", "Gift", "ᚷᛁᚠᚢ"],
+        ["gyð", "Battle", "ᚷᚣᚦ"],
+        ["hild", "Battle", "ᚻᛁᛚᛞ"],
+        ["swīð", "Strength", "ᛋᚹᛁᚦ"],
+        ["þrȳð", "Might", "ᚦᚱᚣᚦ"],
+        ["wyn", "Joy", "ᚹᚣᚾ"]
+    ]
 
     var mfSelected = -1;
 
@@ -103,12 +202,20 @@ window.onload = function() {
             female.classList.add("pressed");
             male.classList.remove("pressed");
 
-            lengthBack = backFemale.names.length;
-            lengthFront = frontFemale.names.length;
-            namesBack = backFemale.names;
-            namesFront = frontFemale.names;
-            meaningsBack = backFemale.meanings;
-            meaningsFront = frontFemale.meanings;
+            for (var i = 0 ; i < frontFemale.length; i++) {
+
+                prefix.innerHTML += "<option value='" + i + "'>"
+                    + "<p id='prefix-name-option-text'>" +  frontFemale[i][0] + "</p>"
+                    + "<p id='prefix-meaning-option-text'> (" +  frontFemale[i][1] + ")</p>"
+                    + "</option>";
+            }
+            for (var i = 0 ; i < backFemale.length; i++) {
+
+                suffix.innerHTML += "<option value='" + i + "'>"
+                    + "<p id='suffix-name-option-text'>" +  backFemale[i][0] + "</p>"
+                    + "<p id='suffix-meaning-option-text'> (" +  backFemale[i][1] + ")</p>"
+                    + "</option>";
+            }
         }
         else if (mfSelected === 1) {
 
@@ -120,27 +227,20 @@ window.onload = function() {
             female.classList.remove("pressed");
             male.classList.add("pressed");
 
-            lengthBack = backMale.names.length;
-            lengthFront = frontMale.names.length;
-            namesBack = backMale.names;
-            namesFront = frontMale.names;
-            meaningsBack = backMale.meanings;
-            meaningsFront = frontMale.meanings;
-        }
+            for (var i = 0 ; i < frontMale.length; i++) {
 
-        for (var i = 0 ; i < lengthFront; i++) {
+                prefix.innerHTML += "<option value='" + i + "'>"
+                    + "<p id='prefix-name-option-text'>" +  frontMale[i][0] + "</p>"
+                    + "<p id='prefix-meaning-option-text'> (" +  frontMale[i][1] + ")</p>"
+                    + "</option>";
+            }
+            for (var i = 0 ; i < backMale.length; i++) {
 
-            prefix.innerHTML += "<option value='" + i + "'>"
-                + "<p id='prefix-name-option-text'>" +  namesFront[i] + "</p>"
-                + "<p id='prefix-meaning-option-text'> (" +  meaningsFront[i] + ")</p>"
-                + "</option>";
-        }
-        for (var i = 0 ; i < lengthBack; i++) {
-
-            suffix.innerHTML += "<option value='" + i + "'>"
-                + "<p id='suffix-name-option-text'>" +  namesBack[i] + "</p>"
-                + "<p id='suffix-meaning-option-text'> (" +  meaningsBack[i] + ")</p>"
-                + "</option>";
+                suffix.innerHTML += "<option value='" + i + "'>"
+                    + "<p id='suffix-name-option-text'>" +  backMale[i][0] + "</p>"
+                    + "<p id='suffix-meaning-option-text'> (" +  backMale[i][1] + ")</p>"
+                    + "</option>";
+            }
         }
     }
 
@@ -164,41 +264,41 @@ window.onload = function() {
 
             gender = "<i class='fa fa-mars'></i>";
 
-            frontRand = Math.floor(Math.random() * frontMale.names.length);
-            backRand = Math.floor(Math.random() * backMale.names.length);
+            frontRand = Math.floor(Math.random() * frontMale.length);
+            backRand = Math.floor(Math.random() * backMale.length);
 
-            while (frontMale.names[frontRand] === backMale.names[backRand])
-                backRand = Math.floor(Math.random() * backMale.names.length);
+            while (frontMale[frontRand][0] === backMale[backRand][0])
+                backRand = Math.floor(Math.random() * backMale.length);
 
             if (prefix.value !== "random") frontRand = prefix.value;
             if (suffix.value !== "random") backRand = suffix.value;
 
-            front = frontMale.names[frontRand];
-            back = backMale.names[backRand];
+            front = frontMale[frontRand][0];
+            back = backMale[backRand][0];
 
             name = front.charAt(0).toUpperCase() + front.slice(1) + back;
-            meaning = frontMale.meanings[frontRand] + " " + backMale.meanings[backRand];
-            runic = frontMale.runic[frontRand] + backMale.runic[backRand];
+            meaning = frontMale[frontRand][1] + " " + backMale[backRand][1];
+            runic = frontMale[frontRand][2] + backMale[backRand][2];
         }
         else {
 
             gender = "<i class='fa fa-venus'></i>";
 
-            frontRand = Math.floor(Math.random() * frontFemale.names.length);
-            backRand = Math.floor(Math.random() * backFemale.names.length);
+            frontRand = Math.floor(Math.random() * frontFemale.length);
+            backRand = Math.floor(Math.random() * backFemale.length);
 
-            while (frontFemale.names[frontRand] === backFemale.names[backRand])
-                backRand = Math.floor(Math.random() * backFemale.names.length);
+            while (frontFemale[frontRand][0] === backFemale[backRand][0])
+                backRand = Math.floor(Math.random() * backFemale.length);
 
             if (prefix.value !== "random") frontRand = prefix.value;
             if (suffix.value !== "random") backRand = suffix.value;
 
-            front = frontFemale.names[frontRand];
-            back = backFemale.names[backRand];
+            front = frontFemale[frontRand][0];
+            back = backFemale[backRand][0];
 
             name = front.charAt(0).toUpperCase() + front.slice(1) + back;
-            meaning = frontFemale.meanings[frontRand] + " " + backFemale.meanings[backRand];
-            runic = frontFemale.runic[frontRand] + backFemale.runic[backRand];
+            meaning = frontFemale[frontRand][1] + " " + backFemale[backRand][1];
+            runic = frontFemale[frontRand][2] + backFemale[backRand][2];
         }
 
         starter.innerHTML = "";
@@ -212,44 +312,44 @@ window.onload = function() {
 
     function modernForm(name) {
 
-        if (name === "Hroðbehrt") return "<br>Modern form: \"Robert/Rupert\"";
-        else if (name === "Eadweard") return "<br>Modern form: \"Edward\"";
-        else if (name === "Eadmund") return "<br>Modern form: \"Edmund\"";
-        else if (name === "Ælfræd") return "<br>Modern form: \"Alfred\"";
-        else if (name === "Eadgyð") return "<br>Modern form: \"Edith\"";
-        else if (name === "Æðelbehrt") return "<br>Modern form: \"Albert\"";
-        else if (name === "Ósweald") return "<br>Modern form: \"Oswald\"";
-        else if (name === "Ósmund") return "<br>Modern form: \"Osmond\"";
-        else if (name === "Eadwine") return "<br>Modern form: \"Edwin\"";
-        else if (name === "Eadgár") return "<br>Modern form: \"Edgar\"";
-        else if (name === "Eadwine") return "<br>Modern form: \"Edwin\"";
-        else if (name === "Hereweald") return "<br>Modern form: \"Harold\"";
-        else if (name === "Æðelþrýð") return "<br>Modern form: \"Audrey\"";
-        else if (name === "Gárþrýð") return "<br>Modern form: \"Gertrude\"";
-        else if (name === "Wilfrið") return "<br>Modern form: \"Wilfred\"";
-        else if (name === "Guþhere") return "<br>Modern form: \"Gunther\"";
-        else if (name === "Mildræd") return "<br>Modern form: \"Mildred\"";
-        else if (name === "Ósgár") return "<br>Modern form: \"Oscar\"";
-        else if (name === "Wilhelm") return "<br>Modern form: \"William\"";
-        else if (name === "Hroðwulf") return "<br>Modern form: \"Rudolf\"";
-        else if (name === "Æðelwulf") return "<br>Modern form: \"Adolf\"";
-        else if (name === "Godgifu") return "<br>Modern form: \"Godiva\"";
-        else if (name === "Eoforheard") return "<br>Modern form: \"Everett\"";
-        else if (name === "Richeard") return "<br>Modern form: \"Richard\"";
-        else if (name === "Beornheard") return "<br>Modern form: \"Bernard\"";
-        else if (name === "Bealdwine") return "<br>Modern form: \"Baldwin\"";
-        else if (name === "Godwine") return "<br>Modern form: \"Godwin\"";
-        else if (name === "Deórwine") return "<br>Modern form: \"Darwin\"";
-        else if (name === "Herewine") return "<br>Modern form: \"Erwin\"";
-        else if (name === "Þeodbeald") return "<br>Modern form: \"Theobald\"";
-        else if (name === "Áric") return "<br>Modern form: \"Eric\"";
-        else if (name === "Áláf") return "<br>Modern form: \"Olaf\"";
-        else if (name === "Friðric") return "<br>Modern form: \"Fredrick\"";
-        else if (name === "Hroðgár") return "<br>Modern form: \"Roger\"";
-        else if (name === "Friðnoð") return "<br>Modern form: \"Ferdinand\"";
-        else if (name === "Þeodric") return "<br>Modern form: \"Dereck\"";
-        else if (name === "Eorcanbeald") return "<br>Modern form: \"Archibald\"";
-        else if (name === "Winestán") return "<br>Modern form: \"Winston\"";
+        if (name === "Hroðbehrt") return "<br>Modern: \"Robert\"";
+        else if (name === "Eadweard") return "<br>Modern: \"Edward\"";
+        else if (name === "Eadmund") return "<br>Modern: \"Edmund\"";
+        else if (name === "Ælfræd") return "<br>Modern: \"Alfred\"";
+        else if (name === "Eadgyð") return "<br>Modern: \"Edith\"";
+        else if (name === "Æðelbehrt") return "<br>Modern: \"Albert\"";
+        else if (name === "Ósweald") return "<br>Modern: \"Oswald\"";
+        else if (name === "Ósmund") return "<br>Modern: \"Osmond\"";
+        else if (name === "Eadwine") return "<br>Modern: \"Edwin\"";
+        else if (name === "Eadgár") return "<br>Modern: \"Edgar\"";
+        else if (name === "Eadwine") return "<br>Modern: \"Edwin\"";
+        else if (name === "Hereweald") return "<br>Modern: \"Harold\"";
+        else if (name === "Æðelþrýð") return "<br>Modern: \"Audrey\"";
+        else if (name === "Gárþrýð") return "<br>Modern: \"Gertrude\"";
+        else if (name === "Wilfrið") return "<br>Modern: \"Wilfred\"";
+        else if (name === "Guþhere") return "<br>Modern: \"Gunther\"";
+        else if (name === "Mildræd") return "<br>Modern: \"Mildred\"";
+        else if (name === "Ósgár") return "<br>Modern: \"Oscar\"";
+        else if (name === "Wilhelm") return "<br>Modern: \"William\"";
+        else if (name === "Hroðwulf") return "<br>Modern: \"Rudolf\"";
+        else if (name === "Æðelwulf") return "<br>Modern: \"Adolf\"";
+        else if (name === "Godgifu") return "<br>Modern: \"Godiva\"";
+        else if (name === "Eoforheard") return "<br>Modern: \"Everett\"";
+        else if (name === "Richeard") return "<br>Modern: \"Richard\"";
+        else if (name === "Beornheard") return "<br>Modern: \"Bernard\"";
+        else if (name === "Bealdwine") return "<br>Modern: \"Baldwin\"";
+        else if (name === "Godwine") return "<br>Modern: \"Godwin\"";
+        else if (name === "Deórwine") return "<br>Modern: \"Darwin\"";
+        else if (name === "Herewine") return "<br>Modern: \"Erwin\"";
+        else if (name === "Þeodbeald") return "<br>Modern: \"Theobald\"";
+        else if (name === "Áric") return "<br>Modern: \"Eric\"";
+        else if (name === "Áláf") return "<br>Modern: \"Olaf\"";
+        else if (name === "Friðric") return "<br>Modern: \"Fredrick\"";
+        else if (name === "Hroðgár") return "<br>Modern: \"Roger\"";
+        else if (name === "Friðnoð") return "<br>Modern: \"Ferdinand\"";
+        else if (name === "Þeodric") return "<br>Modern: \"Dereck\"";
+        else if (name === "Eorcanbeald") return "<br>Modern: \"Archibald\"";
+        else if (name === "Winestán") return "<br>Modern: \"Winston\"";
         else return "";
     }
 }
