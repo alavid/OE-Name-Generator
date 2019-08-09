@@ -11,19 +11,19 @@ window.onload = function() {
     let cancel = document.getElementById("clear-button");
 
     let frontMale = [
-        ["ā", "Eternal", "ᚪ"],
+        ["á", "Eternal", "ᚪ"],
         ["ælf", "Elven", "ᚫᛚᚠ"],
         ["æðel", "Noble", "ᚫᚦᛖᛚ"],
         ["beald", "Bold", "ᛒᛠᛚᛞ"],
         ["beorht", "Bright", "ᛒᛇᚱᚻᛏ"],
         ["beorn", "Warrior", "ᛒᛇᚱᚾ"],
-        ["brūn", "Brown", "ᛒᚱᚢᚾ"],
-        ["cēn", "Bold", "ᚳᛖᚾ"],
-        ["cēol", "Ship", "ᚳᛇᛚ"],
-        ["cūð", "Renowned", "ᚳᚢᚦ"],
+        ["brún", "Brown", "ᛒᚱᚢᚾ"],
+        ["cén", "Bold", "ᚳᛖᚾ"],
+        ["céol", "Ship", "ᚳᛇᛚ"],
+        ["cúð", "Renowned", "ᚳᚢᚦ"],
         ["cyne", "Brave", "ᚳᚣᚾᛖ"],
-        ["dēor", "Dear", "ᛞᛇᚱ"],
-        ["ēad", "Rich", "ᛠᛞ"],
+        ["déor", "Dear", "ᛞᛇᚱ"],
+        ["éad", "Rich", "ᛠᛞ"],
         ["eall", "All", "ᛠᛚᛚ"],
         ["ealh", "Temple", "ᛠᛚᚻ"],
         ["eald", "Old", "ᛠᛚᛞ"],
@@ -34,46 +34,46 @@ window.onload = function() {
         ["engel", "Anglian", "ᛖᛝᛖᛚ"],
         ["frið", "Peaceful", "ᚠᚱᛁᚦ"],
         ["glæd", "Gleaming", "ᚷᛚᚫᛞ"],
-        ["gōd", "Good", "ᚷᚩᛞ"],
+        ["gód", "Good", "ᚷᚩᛞ"],
         ["grim", "Fierce", "ᚷᚱᛁᛗ"],
-        ["gūð", "Combat", "ᚷᚢᚦ"],
+        ["gúð", "Combat", "ᚷᚢᚦ"],
         ["here", "Army", "ᚻᛖᚱᛖ"],
         ["hild", "Battle", "ᚻᛁᛚᛞ"],
         ["hroð", "Famous", "ᚻᚱᚩᚦ"],
-        ["lēof", "Beloved", "ᛚᛇᚠ"],
-        ["ōht", "Fearsome", "ᚩᚻᛏ"],
-        ["ōs", "Divine", "ᚩᛋ"],
-        ["rīc", "Powerful", "ᚱᛁᚳ"],
-        ["sǣ", "Sea", "ᛋᚫ"],
+        ["léof", "Beloved", "ᛚᛇᚠ"],
+        ["óht", "Fearsome", "ᚩᚻᛏ"],
+        ["ós", "Divine", "ᚩᛋ"],
+        ["ríc", "Powerful", "ᚱᛁᚳ"],
+        ["sǽ", "Sea", "ᛋᚫ"],
         ["sige", "Victorious", "ᛋᛁᚷᛖ"],
-        ["stīð", "Hard", "ᛋᛏᛁᚦ"],
+        ["stíð", "Hard", "ᛋᛏᛁᚦ"],
         ["sunu", "Son's", "ᛋᚢᚾᚢ"],
-        ["swīð", "Strong", "ᛋᚹᛁᚦ"],
+        ["swíð", "Strong", "ᛋᚹᛁᚦ"],
         ["þunor", "Thor", "ᚦᚢᚾᚩᚱ"],
-        ["þēod", "People's", "ᚦᛇᛞ"],
+        ["þéod", "People's", "ᚦᛇᛞ"],
         ["þegn", "Thane's", "ᚦᛖᚷᚾ"],
         ["wald", "Forest", "ᚹᚪᛚᛞ"],
         ["wæl", "Slaughter", "ᚹᚫᛚ"],
-        ["wāð", "Wandering", "ᚹᚪᚦ"],
+        ["wáð", "Wandering", "ᚹᚪᚦ"],
         ["weald", "Powerful", "ᚹᛠᛚᛞ"],
-        ["wīg", "War", "ᚹᛁᚷ"],
+        ["wíg", "War", "ᚹᛁᚷ"],
         ["wil", "Desired", "ᚹᛁᛚ"],
         ["wine", "Friendly", "ᚹᛁᚾᛖ"],
         ["wulf", "Wolfish", "ᚹᚢᛚᚠ"],
         ["wyn", "Joyous", "ᚹᚣᚾ"]
     ]
     let frontFemale = [
-        ["ā", "Eternal", "ᚪ"],
+        ["á", "Eternal", "ᚪ"],
         ["ælf", "Elven", "ᚫᛚᚠ"],
         ["æðel", "Noble", "ᚫᚦᛖᛚ"],
         ["beorht", "Bright", "ᛒᛇᚱᚻᛏ"],
-        ["brūn", "Brown", "ᛒᚱᚢᚾ"],
-        ["cēn", "Bold", "ᚳᛖᚾ"],
-        ["cēol", "Ship", "ᚳᛇᛚ"],
-        ["cūð", "Renowned", "ᚳᚢᚦ"],
-        ["cwēn", "Queen's", "ᚳᚹᛖᚾ"],
-        ["dēor", "Dear", "ᛞᛇᚱ"],
-        ["ēad", "Rich", "ᛠᛞ"],
+        ["brún", "Brown", "ᛒᚱᚢᚾ"],
+        ["cén", "Bold", "ᚳᛖᚾ"],
+        ["céol", "Ship", "ᚳᛇᛚ"],
+        ["cúð", "Renowned", "ᚳᚢᚦ"],
+        ["cwén", "Queen's", "ᚳᚹᛖᚾ"],
+        ["déor", "Dear", "ᛞᛇᚱ"],
+        ["éad", "Rich", "ᛠᛞ"],
         ["eall", "All", "ᛠᛚᛚ"],
         ["ealh", "Temple", "ᛠᛚᚻ"],
         ["eald", "Old", "ᛠᛚᛞ"],
@@ -82,27 +82,28 @@ window.onload = function() {
         ["eoh", "Horse", "ᛇᚻ"],
         ["eorcen", "Pure", "ᛇᚱᚳᚪᚾ"],
         ["engel", "Anglian", "ᛖᛝᛖᛚ"],
+        ["gár", "Spear", "ᚷᚪᚱ"],
         ["glæd", "Gleaming", "ᚷᛚᚫᛞ"],
-        ["gōd", "Good", "ᚷᚩᛞ"],
+        ["gód", "Good", "ᚷᚩᛞ"],
         ["grim", "Fierce", "ᚷᚱᛁᛗ"],
         ["here", "Army", "ᚻᛖᚱᛖ"],
         ["hild", "Battle", "ᚻᛁᛚᛞ"],
         ["hroð", "Famous", "ᚻᚱᚩᚦ"],
-        ["lēof", "Beloved", "ᛚᛇᚠ"],
+        ["léof", "Beloved", "ᛚᛇᚠ"],
         ["mild", "Gentle", "ᛗᛁᛚᛞ"],
-        ["ōs", "Divine", "ᚩᛋ"],
-        ["sǣ", "Sea", "ᛋᚫ"],
+        ["ós", "Divine", "ᚩᛋ"],
+        ["sǽ", "Sea", "ᛋᚫ"],
         ["sige", "Victorious", "ᛋᛁᚷᛖ"],
-        ["stīð", "Hard", "ᛋᛏᛁᚦ"],
-        ["swīð", "Strong", "ᛋᚹᛁᚦ"],
+        ["stíð", "Hard", "ᛋᛏᛁᚦ"],
+        ["swíð", "Strong", "ᛋᚹᛁᚦ"],
         ["þunor", "Thor", "ᚦᚢᚾᚩᚱ"],
-        ["þēod", "People's", "ᚦᛇᛞ"],
+        ["þéod", "People's", "ᚦᛇᛞ"],
         ["þegn", "Thane's", "ᚦᛖᚷᚾ"],
         ["wald", "Forest", "ᚹᚪᛚᛞ"],
         ["wæl", "Slaughter", "ᚹᚫᛚ"],
-        ["wāð", "Hunt", "ᚹᚪᚦ"],
+        ["wáð", "Hunt", "ᚹᚪᚦ"],
         ["weald", "Powerful", "ᚹᛠᛚᛞ"],
-        ["wīg", "War", "ᚹᛁᚷ"],
+        ["wíg", "War", "ᚹᛁᚷ"],
         ["wil", "Desired", "ᚹᛁᛚ"],
         ["wine", "Friendly", "ᚹᛁᚾᛖ"],
         ["wulf", "Wolf", "ᚹᚢᛚᚠ"],
@@ -114,20 +115,20 @@ window.onload = function() {
         ["beorn", "Warrior", "ᛒᛇᚱᚾ"],
         ["dæg", "Day", "ᛞᚫᚷ"],
         ["frið", "Peace", "ᚠᚱᛁᚦ"],
-        ["gār", "Spear", "ᚷᚪᚱ"],
-        ["hēah", "High", "ᚻᛠᚻ"],
+        ["gár", "Spear", "ᚷᚪᚱ"],
+        ["héah", "High", "ᚻᛠᚻ"],
         ["heard", "Bravery", "ᚻᛠᚱᛞ"],
         ["helm", "Helmet", "ᚻᛖᛚᛗ"],
         ["here", "Army", "ᚻᛖᚱᛖ"],
-        ["hūn", "Young Bear", "ᚻᚢᚾ"],
-        ["lāf", "Heir", "ᛚᚪᚠ"],
-        ["mǣre", "Fame", "ᛗᚫᚱᛖ"],
+        ["hún", "Young Bear", "ᚻᚢᚾ"],
+        ["láf", "Heir", "ᛚᚪᚠ"],
+        ["mǽre", "Fame", "ᛗᚫᚱᛖ"],
         ["mund", "Protector", "ᛗᚢᚾᛞ"],
-        ["nōð", "Boldness", "ᚾᚩᚦ"],
-        ["rǣd", "Counsel", "ᚱᚫᛞ"],
-        ["rīc", "Power", "ᚱᛁᚳ"],
+        ["nóð", "Boldness", "ᚾᚩᚦ"],
+        ["rǽd", "Counsel", "ᚱᚫᛞ"],
+        ["ríc", "Power", "ᚱᛁᚳ"],
         ["sige", "Victory", "ᛋᛁᚷᛖ"],
-        ["stān", "Stone", "ᛋᛏᚪᚾ"],
+        ["stán", "Stone", "ᛋᛏᚪᚾ"],
         ["þegn", "Thane", "ᚦᛖᚷᚾ"],
         ["þunor", "Thor", "ᚦᚢᚾᚩᚱ"],
         ["weald", "Power", "ᚹᛠᛚᛞ"],
@@ -142,8 +143,9 @@ window.onload = function() {
         ["gifu", "Gift", "ᚷᛁᚠᚢ"],
         ["gyð", "Battle", "ᚷᚣᚦ"],
         ["hild", "Battle", "ᚻᛁᛚᛞ"],
-        ["swīð", "Strength", "ᛋᚹᛁᚦ"],
-        ["þrȳð", "Might", "ᚦᚱᚣᚦ"],
+        ["swíð", "Strength", "ᛋᚹᛁᚦ"],
+        ["rǽd", "Counsel", "ᚱᚫᛞ"],
+        ["þrýð", "Might", "ᚦᚱᚣᚦ"],
         ["wyn", "Joy", "ᚹᚣᚾ"]
     ]
 
@@ -313,42 +315,42 @@ window.onload = function() {
     function modernForm(name) {
 
         if (name === "Hroðbehrt") return "<br>Modern: \"Robert\"";
-        else if (name === "Eadweard") return "<br>Modern: \"Edward\"";
-        else if (name === "Eadmund") return "<br>Modern: \"Edmund\"";
-        else if (name === "Ælfræd") return "<br>Modern: \"Alfred\"";
-        else if (name === "Eadgyð") return "<br>Modern: \"Edith\"";
+        else if (name === "Éadweard") return "<br>Modern: \"Edward\"";
+        else if (name === "Éadmund") return "<br>Modern: \"Edmund\"";
+        else if (name === "Ælfrǽd") return "<br>Modern: \"Alfred\"";
+        else if (name === "Éadgyð") return "<br>Modern: \"Edith\"";
         else if (name === "Æðelbehrt") return "<br>Modern: \"Albert\"";
         else if (name === "Ósweald") return "<br>Modern: \"Oswald\"";
         else if (name === "Ósmund") return "<br>Modern: \"Osmond\"";
         else if (name === "Eadwine") return "<br>Modern: \"Edwin\"";
         else if (name === "Eadgár") return "<br>Modern: \"Edgar\"";
-        else if (name === "Eadwine") return "<br>Modern: \"Edwin\"";
+        else if (name === "Éadwine") return "<br>Modern: \"Edwin\"";
         else if (name === "Hereweald") return "<br>Modern: \"Harold\"";
         else if (name === "Æðelþrýð") return "<br>Modern: \"Audrey\"";
         else if (name === "Gárþrýð") return "<br>Modern: \"Gertrude\"";
         else if (name === "Wilfrið") return "<br>Modern: \"Wilfred\"";
-        else if (name === "Guþhere") return "<br>Modern: \"Gunther\"";
-        else if (name === "Mildræd") return "<br>Modern: \"Mildred\"";
+        else if (name === "Gúðhere") return "<br>Modern: \"Gunther\"";
+        else if (name === "Mildrǽd") return "<br>Modern: \"Mildred\"";
         else if (name === "Ósgár") return "<br>Modern: \"Oscar\"";
         else if (name === "Wilhelm") return "<br>Modern: \"William\"";
         else if (name === "Hroðwulf") return "<br>Modern: \"Rudolf\"";
         else if (name === "Æðelwulf") return "<br>Modern: \"Adolf\"";
         else if (name === "Godgifu") return "<br>Modern: \"Godiva\"";
         else if (name === "Eoforheard") return "<br>Modern: \"Everett\"";
-        else if (name === "Richeard") return "<br>Modern: \"Richard\"";
+        else if (name === "Rícheard") return "<br>Modern: \"Richard\"";
         else if (name === "Beornheard") return "<br>Modern: \"Bernard\"";
         else if (name === "Bealdwine") return "<br>Modern: \"Baldwin\"";
-        else if (name === "Godwine") return "<br>Modern: \"Godwin\"";
-        else if (name === "Deórwine") return "<br>Modern: \"Darwin\"";
+        else if (name === "Gódwine") return "<br>Modern: \"Godwin\"";
+        else if (name === "Déorwine") return "<br>Modern: \"Darwin\"";
         else if (name === "Herewine") return "<br>Modern: \"Erwin\"";
-        else if (name === "Þeodbeald") return "<br>Modern: \"Theobald\"";
-        else if (name === "Áric") return "<br>Modern: \"Eric\"";
+        else if (name === "Þéodbeald") return "<br>Modern: \"Theobald\"";
+        else if (name === "Áríc") return "<br>Modern: \"Eric\"";
         else if (name === "Áláf") return "<br>Modern: \"Olaf\"";
-        else if (name === "Friðric") return "<br>Modern: \"Fredrick\"";
+        else if (name === "Friðríc") return "<br>Modern: \"Fredrick\"";
         else if (name === "Hroðgár") return "<br>Modern: \"Roger\"";
-        else if (name === "Friðnoð") return "<br>Modern: \"Ferdinand\"";
-        else if (name === "Þeodric") return "<br>Modern: \"Dereck\"";
-        else if (name === "Eorcanbeald") return "<br>Modern: \"Archibald\"";
+        else if (name === "Friðnóð") return "<br>Modern: \"Ferdinand\"";
+        else if (name === "Þéodríc") return "<br>Modern: \"Dereck\"";
+        else if (name === "Eorcenbeald") return "<br>Modern: \"Archibald\"";
         else if (name === "Winestán") return "<br>Modern: \"Winston\"";
         else return "";
     }
