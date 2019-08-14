@@ -21,7 +21,7 @@ window.onload = function() {
         ["cén", "Bold", "ᚳᛖᚾ"],
         ["céol", "Ship", "ᚳᛇᛚ"],
         ["cúð", "Renowned", "ᚳᚢᚦ"],
-        ["cyne", "Brave", "ᚳᚣᚾᛖ"],
+        ["cyne", "Kingly", "ᚳᚣᚾᛖ"],
         ["déor", "Dear", "ᛞᛇᚱ"],
         ["éad", "Rich", "ᛠᛞ"],
         ["eall", "All", "ᛠᛚᛚ"],

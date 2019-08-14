@@ -220,3 +220,48 @@ body {
     background-image: url("../Images/ricepaper_v3.png");
     background-repeat: repeat;
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    #content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #list {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        width: 95vw;
+        justify-content: center;
+    }
+
+    #entry {
+        width: 40%;
+        height: 140px;
+    }
+
+    #title {
+        font-size: 16pt;
+    }
+
+    #description {
+        display: none;
+    }
+
+    #button-container {
+        flex-grow: 1;
+    }
+
+@media only screen and (max-width: 368px) {
+    #entry {
+        width: 80%;
+        height: 108px;
+    }
+}
