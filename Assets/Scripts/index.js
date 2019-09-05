@@ -111,7 +111,7 @@ window.onload = function() {
     ]
     let backMale = [
         ["beald", "Bold", "ᛒᛠᛚᛞ"],
-        ["behrt", "Bright", "ᛒᛇᚱᚻᛏ"],
+        ["behrt", "Bright", "ᛒᛖᚱᚻᛏ"],
         ["beorn", "Warrior", "ᛒᛇᚱᚾ"],
         ["dæg", "Day", "ᛞᚫᚷ"],
         ["frið", "Peace", "ᚠᚱᛁᚦ"],
