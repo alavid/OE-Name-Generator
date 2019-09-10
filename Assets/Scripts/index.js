@@ -335,7 +335,7 @@ window.onload = function() {
         else if (name === "Wilhelm") return "<br>Modern: \"William\"";
         else if (name === "Hroðwulf") return "<br>Modern: \"Rudolf\"";
         else if (name === "Æðelwulf") return "<br>Modern: \"Adolf\"";
-        else if (name === "Godgifu") return "<br>Modern: \"Godiva\"";
+        else if (name === "Gódgifu") return "<br>Modern: \"Godiva\"";
         else if (name === "Eoforheard") return "<br>Modern: \"Everett\"";
         else if (name === "Rícheard") return "<br>Modern: \"Richard\"";
         else if (name === "Beornheard") return "<br>Modern: \"Bernard\"";
